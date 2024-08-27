@@ -2,7 +2,7 @@ import java.util.HashMap;
 
 public class functional {
     static HashMap<String, String> words = new HashMap<>();
-    public static void showAll()
+    public static void showAll()//Доделать, чтобы отображалось без фигурных скобок
     {
         System.out.println(words.toString());
     }
