@@ -14,6 +14,7 @@ public class Main {
         System.out.println("3 - найти запись по ключу");
         System.out.println("4 - добавить запись");
         System.out.println("5 - сохранить изменения");
+        System.out.println("6 - сменить словарь");
 
         Scanner scan = new Scanner(System.in);
         int action = scan.nextInt();
@@ -38,10 +39,10 @@ public class Main {
                 if (flag)
                     functional.addWords(key, word);
                 else {
-                    if (word == "[0-9]+") // ПЕРЕДЕЛАТЬ ПРОВЕРКУ, ЧТО СЛОВО СОДЕРЖИТ В СЕБЕ ТОЛЬКО ЦИФРЫ
+                    if (word.matches("[0-9]+")) // ПЕРЕДЕЛАТЬ ПРОВЕРКУ, ЧТО СЛОВО СОДЕРЖИТ В СЕБЕ ТОЛЬКО ЦИФРЫ
                         functional.addNumbers(key, Integer.parseInt(word));
                     else
-                        System.out.println("Разрешено вводить только пять цифр111");
+                        System.out.println("Разрешено вводить только пять цифр");
 
                 }
                 break;
